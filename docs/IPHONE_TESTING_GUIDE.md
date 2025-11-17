@@ -101,6 +101,18 @@ xcode-select --install
 
 點擊「**Next**」，選擇儲存位置（建議放在「文件」資料夾），點擊「**Create**」。
 
+### 步驟 3：設定專案僅支援 iOS
+
+**重要**：專案預設可能支援多平台，需要限制為僅支援 iOS。
+
+1. 在左側檔案清單中，點擊最上方的「**TaipeiLeftTurnAlert**」（藍色專案圖示）
+2. 在「**TARGETS**」區域，選擇「**TaipeiLeftTurnAlert**」
+3. 選擇「**General**」標籤頁
+4. 在「**Deployment Info**」區域：
+   - 確認「**Supported Destinations**」只有「**iPhone**」被勾選
+   - 如果有「Mac」或其他選項被勾選，請取消勾選
+5. 在「**Minimum Deployments**」設定為「**iOS 15.0**」
+
 ---
 
 ## 加入原型程式碼
@@ -207,7 +219,7 @@ struct ContentView: View {
                                 .frame(maxWidth: .infinity)
                                 .padding()
                                 .background(Color.blue)
-                                .foreground Color(.white)
+                                .foregroundColor(.white)
                                 .cornerRadius(10)
                         }
                     }
@@ -448,6 +460,27 @@ struct ContentView_Previews: PreviewProvider {
 ---
 
 ## 常見問題
+
+### Q0: 編譯錯誤：「XXX is unavailable in macOS」
+
+**問題描述**：
+出現多個錯誤訊息如：
+- `'AVAudioSession' is unavailable in macOS`
+- `'showsBackgroundLocationIndicator' is unavailable in macOS`
+- `'authorizedWhenInUse' is unavailable in macOS`
+
+**原因**：
+Xcode 專案預設支援多平台（iOS + macOS），但本專案使用了僅限 iOS 的 API。
+
+**解決方案**：
+1. 在左側檔案清單，點擊最上方的「**TaipeiLeftTurnAlert**」（藍色專案圖示）
+2. 在「**TARGETS**」區域，選擇「**TaipeiLeftTurnAlert**」
+3. 選擇「**General**」標籤頁
+4. 在「**Deployment Info > Supported Destinations**」：
+   - ✅ 確認只勾選「**iPhone**」
+   - ❌ 取消勾選「**Mac**」或其他平台
+5. 清理專案：Product > Clean Build Folder（⌘+Shift+K）
+6. 重新建置：Product > Build（⌘+B）
 
 ### Q1: Xcode 無法在 iPhone 上執行，顯示「Developer Mode Required」
 
