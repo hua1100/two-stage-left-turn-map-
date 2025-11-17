@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "district": "大同",
+    "intersection": "承德路與市民大道",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "latitude": 25.052856,
+    "longitude": 121.516831,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 7,
+    "district": "南港",
+    "intersection": "忠孝東路與研究院路",
+    "direction": "南往西、西往北",
+    "opened_year": "98年以前",
+    "latitude": 25.041283,
+    "longitude": 121.615158,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 23,
+    "district": "大安",
+    "intersection": "基隆路2段與敦化南路2段",
+    "direction": "西往北",
+    "opened_year": "98年以前",
+    "latitude": 25.026542,
+    "longitude": 121.550283,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 27,
+    "district": "信義",
+    "intersection": "忠孝東路與松仁路",
+    "direction": "南往西",
+    "opened_year": "98年以前",
+    "latitude": 25.041700,
+    "longitude": 121.567500,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 42,
+    "district": "中山",
+    "intersection": "民族東路與復興北路",
+    "direction": "北往南",
+    "opened_year": "98年以前",
+    "latitude": 25.062156,
+    "longitude": 121.544289,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 43,
+    "district": "中正",
+    "intersection": "忠孝東路與八德路",
+    "direction": "西往北",
+    "opened_year": "102年",
+    "latitude": 25.044728,
+    "longitude": 121.527894,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 45,
+    "district": "中正",
+    "intersection": "公園路與襄陽路",
+    "direction": "南往西、西往北",
+    "opened_year": "104年",
+    "latitude": 25.043856,
+    "longitude": 121.515644,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 57,
+    "district": "大同",
+    "intersection": "民權西路與延平北路",
+    "direction": "東往南",
+    "opened_year": "109年",
+    "latitude": 25.062631,
+    "longitude": 121.515514,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 59,
+    "district": "士林",
+    "intersection": "中正路與文林路",
+    "direction": "東西雙向",
+    "opened_year": "109年",
+    "latitude": 25.091461,
+    "longitude": 121.524386,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 85,
+    "district": "大同",
+    "intersection": "承德路與南京西路口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "latitude": 25.052500,
+    "longitude": 121.520367,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 96,
+    "district": "內湖",
+    "intersection": "成功路二段與民權東路六段口",
+    "direction": "南北雙向",
+    "opened_year": "112年",
+    "latitude": 25.068014,
+    "longitude": 121.577228,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 114,
+    "district": "中山",
+    "intersection": "民權東路2段與松江路口",
+    "direction": "南北雙向",
+    "opened_year": "113年",
+    "latitude": 25.062400,
+    "longitude": 121.533428,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 116,
+    "district": "大安",
+    "intersection": "建國南路1段與濟南路口",
+    "direction": "南往西",
+    "opened_year": "113年",
+    "latitude": 25.042617,
+    "longitude": 121.536239,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 121,
+    "district": "南港",
+    "intersection": "忠孝東路6段與向陽路口",
+    "direction": "東西雙向",
+    "opened_year": "114年",
+    "latitude": 25.050611,
+    "longitude": 121.594292,
+    "geocoded": true,
+    "geocode_source": "manual"
+  },
+  {
+    "id": 4,
+    "district": "士林",
+    "intersection": "中山北路與天母東西路",
+    "direction": "南北雙向",
+    "opened_year": "98年以前",
+    "latitude": 25.117322,
+    "longitude": 121.529681,
+    "geocoded": true,
+    "geocode_source": "manual"
+  }
+]
