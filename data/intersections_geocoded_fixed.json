@@ -1,0 +1,1097 @@
+[
+  {
+    "id": 1,
+    "district": "大同",
+    "intersection": "承德路與市民大道",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 2,
+    "district": "士林",
+    "intersection": "福林路與至善路",
+    "direction": "南往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 3,
+    "district": "士林",
+    "intersection": "文昌路與中正路",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 4,
+    "district": "士林",
+    "intersection": "中山北路與天母東西路",
+    "direction": "南北雙向",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 5,
+    "district": "士林",
+    "intersection": "中山北路5段與福國路",
+    "direction": "南往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 6,
+    "district": "士林",
+    "intersection": "延平北路6段、環河北路3段與社中街",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "latitude": 25.110428,
+    "longitude": 121.508276,
+    "geocoded": true,
+    "geocode_source": "manual_fix"
+  },
+  {
+    "id": 7,
+    "district": "南港",
+    "intersection": "忠孝東路與研究院路",
+    "direction": "南往西、西往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 8,
+    "district": "南港",
+    "intersection": "南港路與經貿一路",
+    "direction": "北往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 9,
+    "district": "內湖",
+    "intersection": "成功路與康湖路",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 10,
+    "district": "內湖",
+    "intersection": "成功路與文德路",
+    "direction": "南往西、東往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 11,
+    "district": "內湖",
+    "intersection": "堤頂大道與港墘路",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 12,
+    "district": "內湖",
+    "intersection": "康寧路3段與康寧路3段75巷",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 13,
+    "district": "內湖",
+    "intersection": "康寧路3段與康寧路3段165巷",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 14,
+    "district": "內湖",
+    "intersection": "康寧路3段與東湖路",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 15,
+    "district": "內湖",
+    "intersection": "康寧路3段與五分街",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 16,
+    "district": "內湖",
+    "intersection": "康寧路3段與康寧路3段70巷",
+    "direction": "南往西",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 17,
+    "district": "內湖",
+    "intersection": "康寧路3段與康寧路3段16巷(南路口)",
+    "direction": "南往西",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 18,
+    "district": "內湖",
+    "intersection": "康寧路3段與康寧路3段16巷(北路口)",
+    "direction": "南往西",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 19,
+    "district": "中正",
+    "intersection": "水源路與泉州街",
+    "direction": "東往西",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 20,
+    "district": "中正",
+    "intersection": "水源路與師大路",
+    "direction": "南往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 21,
+    "district": "萬華",
+    "intersection": "中華路與艋舺大道",
+    "direction": "北往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 22,
+    "district": "萬華",
+    "intersection": "桂林路與昆明街",
+    "direction": "西往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 23,
+    "district": "大安",
+    "intersection": "基隆路2段與敦化南路2段",
+    "direction": "西往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 24,
+    "district": "大安",
+    "intersection": "新生南路3段與羅斯福路4段",
+    "direction": "東往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 25,
+    "district": "大安",
+    "intersection": "辛亥路與建國南路",
+    "direction": "南往西",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 26,
+    "district": "信義",
+    "intersection": "信義路與松德路",
+    "direction": "北往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 27,
+    "district": "信義",
+    "intersection": "忠孝東路與松仁路",
+    "direction": "南往西",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 28,
+    "district": "信義",
+    "intersection": "光復南路與基隆路",
+    "direction": "北往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 29,
+    "district": "信義",
+    "intersection": "仁愛路與市府路",
+    "direction": "西往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 30,
+    "district": "信義",
+    "intersection": "松隆路與基隆路",
+    "direction": "東往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 31,
+    "district": "信義",
+    "intersection": "松壽路與松仁路",
+    "direction": "西往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 32,
+    "district": "信義",
+    "intersection": "松山路與松德路",
+    "direction": "西往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 33,
+    "district": "信義",
+    "intersection": "仁愛路與逸仙路",
+    "direction": "北往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 34,
+    "district": "松山",
+    "intersection": "松隆路與中坡北路",
+    "direction": "西往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 35,
+    "district": "松山",
+    "intersection": "松山路與永吉路",
+    "direction": "南往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 36,
+    "district": "松山",
+    "intersection": "塔悠路與健康路",
+    "direction": "西往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 37,
+    "district": "松山",
+    "intersection": "塔悠路與松信路",
+    "direction": "北往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 38,
+    "district": "松山",
+    "intersection": "光復北路與南京東路5段",
+    "direction": "南往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 39,
+    "district": "松山",
+    "intersection": "光復北路與南京東路5段",
+    "direction": "南往北",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 40,
+    "district": "中山",
+    "intersection": "大直橋與北安路",
+    "direction": "東往西",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 41,
+    "district": "中山",
+    "intersection": "中山北路與通河街",
+    "direction": "西往東",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 42,
+    "district": "中山",
+    "intersection": "民族東路與復興北路",
+    "direction": "北往南",
+    "opened_year": "98年以前",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 43,
+    "district": "中正",
+    "intersection": "忠孝東路與八德路",
+    "direction": "西往北",
+    "opened_year": "102年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 44,
+    "district": "北投",
+    "intersection": "立賢路與承德路7段",
+    "direction": "南往西",
+    "opened_year": "103年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 45,
+    "district": "中正",
+    "intersection": "公園路與襄陽路",
+    "direction": "南往西、西往北",
+    "opened_year": "104年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 46,
+    "district": "松山",
+    "intersection": "松山路與忠孝東路5段",
+    "direction": "北往南",
+    "opened_year": "104年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 47,
+    "district": "信義",
+    "intersection": "信義路5段與基隆路2段路",
+    "direction": "東往南",
+    "opened_year": "106年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 48,
+    "district": "士林",
+    "intersection": "福國路與文林路",
+    "direction": "東往南",
+    "opened_year": "106年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 49,
+    "district": "北投",
+    "intersection": "大業路與承德路7段",
+    "direction": "北往東",
+    "opened_year": "108年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 50,
+    "district": "北投",
+    "intersection": "大度路與立德路",
+    "direction": "西往北",
+    "opened_year": "108年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 51,
+    "district": "北投",
+    "intersection": "大業路與大業路65巷",
+    "direction": "北往東",
+    "opened_year": "108年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 52,
+    "district": "萬華",
+    "intersection": "西藏路與西園路",
+    "direction": "東往南",
+    "opened_year": "108年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 53,
+    "district": "大安",
+    "intersection": "和平東路3段與和平東路3段346巷",
+    "direction": "西往北",
+    "opened_year": "108年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 54,
+    "district": "文山",
+    "intersection": "木柵路與秀明路",
+    "direction": "西往北",
+    "opened_year": "108年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 55,
+    "district": "中正",
+    "intersection": "三元街與寧波西街",
+    "direction": "西往北",
+    "opened_year": "108年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 56,
+    "district": "松山",
+    "intersection": "塔悠路與南京東路5段",
+    "direction": "北往東",
+    "opened_year": "108年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 57,
+    "district": "大同",
+    "intersection": "民權西路與延平北路",
+    "direction": "東往南",
+    "opened_year": "109年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 58,
+    "district": "信義",
+    "intersection": "市府路與松壽路",
+    "direction": "南往西",
+    "opened_year": "109年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 59,
+    "district": "士林",
+    "intersection": "中正路與文林路",
+    "direction": "東西雙向",
+    "opened_year": "109年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 60,
+    "district": "士林",
+    "intersection": "中正路與文昌路",
+    "direction": "西往北",
+    "opened_year": "110年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 61,
+    "district": "士林",
+    "intersection": "中正路與延平北路",
+    "direction": "東西雙向",
+    "opened_year": "110年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 62,
+    "district": "北投",
+    "intersection": "大度路3段與中央北路",
+    "direction": "北往東",
+    "opened_year": "110年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 63,
+    "district": "內湖",
+    "intersection": "基湖路與瑞光路",
+    "direction": "北往東",
+    "opened_year": "111年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 64,
+    "district": "北投",
+    "intersection": "東華路與石牌路2段",
+    "direction": "南往西",
+    "opened_year": "111年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 65,
+    "district": "大安",
+    "intersection": "金山南路與和平東路",
+    "direction": "北往東、西往北",
+    "opened_year": "98年以前、111年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 66,
+    "district": "松山",
+    "intersection": "塔悠路與民生東路口",
+    "direction": "西往北",
+    "opened_year": "111年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 67,
+    "district": "內湖",
+    "intersection": "舊宗路1段與新湖二路口",
+    "direction": "南北雙向",
+    "opened_year": "111年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 68,
+    "district": "內湖",
+    "intersection": "舊宗路1段與新湖三路口",
+    "direction": "南北雙向",
+    "opened_year": "111年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 69,
+    "district": "士林",
+    "intersection": "中正路與基河路口",
+    "direction": "東往南",
+    "opened_year": "111年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 70,
+    "district": "萬華",
+    "intersection": "西園路1段與艋舺大道路口",
+    "direction": "北往東",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 71,
+    "district": "內湖",
+    "intersection": "內湖路一段與內湖路一段91巷口",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 72,
+    "district": "內湖",
+    "intersection": "內湖路一段與內湖路一段203巷口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 73,
+    "district": "內湖",
+    "intersection": "內湖路一段與環山路一段基湖路口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 74,
+    "district": "內湖",
+    "intersection": "成功路四段與成功路四段61巷",
+    "direction": "東往西",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 75,
+    "district": "內湖",
+    "intersection": "內湖路一段與內湖路一段411巷口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 76,
+    "district": "內湖",
+    "intersection": "內湖路一段與內湖路一段591巷口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 77,
+    "district": "內湖",
+    "intersection": "內湖路一段與港墘路口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 78,
+    "district": "內湖",
+    "intersection": "內湖路一段與文德路22巷口",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 79,
+    "district": "內湖",
+    "intersection": "文德路與文德路101巷文德路208巷口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 80,
+    "district": "大安",
+    "intersection": "和平東路3段及安和路2段",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "latitude": 25.024319,
+    "longitude": 121.553158,
+    "geocoded": true,
+    "geocode_source": "manual_fix"
+  },
+  {
+    "id": 81,
+    "district": "內湖",
+    "intersection": "成功路五段與康寧路3段口",
+    "direction": "北往東",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 82,
+    "district": "南港",
+    "intersection": "忠孝東路6段與向陽路口",
+    "direction": "北往東",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 83,
+    "district": "南港",
+    "intersection": "忠孝東路6段與東新街口",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 84,
+    "district": "南港",
+    "intersection": "忠孝東路6段與玉成街口",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 85,
+    "district": "大同",
+    "intersection": "承德路與南京西路口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 86,
+    "district": "內湖",
+    "intersection": "成功路2段與成功路2段323巷",
+    "direction": "北往東",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 87,
+    "district": "松山",
+    "intersection": "八德路與松山路口",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 88,
+    "district": "內湖",
+    "intersection": "成功路二段與成功路二段320巷口",
+    "direction": "南往西",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 89,
+    "district": "內湖",
+    "intersection": "成功路二段與成功路二段426巷口",
+    "direction": "北往東",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 90,
+    "district": "內湖",
+    "intersection": "成功路二段與成功路二段486巷口",
+    "direction": "南往西",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 91,
+    "district": "內湖",
+    "intersection": "成功路三段與康寧路一段口",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 92,
+    "district": "內湖",
+    "intersection": "成功路四段與成功路四段324巷口",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 93,
+    "district": "內湖",
+    "intersection": "成功路四段與大湖街131巷口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 94,
+    "district": "內湖",
+    "intersection": "成功路五段與大湖街166巷口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 95,
+    "district": "內湖",
+    "intersection": "瑞光路與陽光街口",
+    "direction": "南往西",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 96,
+    "district": "內湖",
+    "intersection": "成功路二段與民權東路六段口",
+    "direction": "南北雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 97,
+    "district": "內湖",
+    "intersection": "內湖路一段與港墘路口",
+    "direction": "南北雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 98,
+    "district": "內湖",
+    "intersection": "民權東路6段與康寧路3段路口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 99,
+    "district": "內湖",
+    "intersection": "民權東路6段與民權東路6段298巷",
+    "direction": "東往南",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 100,
+    "district": "內湖",
+    "intersection": "民權東路6段與民權東路6段191巷",
+    "direction": "西往北",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 101,
+    "district": "內湖",
+    "intersection": "民權東路6段與民權東路6段123巷口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 102,
+    "district": "內湖",
+    "intersection": "民權東路6段與成功路2段路口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 103,
+    "district": "內湖",
+    "intersection": "民權東路6段與瑞光路口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 104,
+    "district": "南港",
+    "intersection": "南港路1段與研究院路1段路口",
+    "direction": "東往南",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 105,
+    "district": "南港",
+    "intersection": "南港路3段與向陽路口",
+    "direction": "東西雙向",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 106,
+    "district": "南港",
+    "intersection": "重陽路與向陽路口",
+    "direction": "東往南",
+    "opened_year": "112年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 107,
+    "district": "內湖",
+    "intersection": "南京東路6段與新明路298巷口",
+    "direction": "南往西",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 108,
+    "district": "內湖",
+    "intersection": "瑞光路與港墘路口",
+    "direction": "東往南",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 109,
+    "district": "內湖",
+    "intersection": "瑞光路與瑞光路478巷口",
+    "direction": "東往南",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 110,
+    "district": "大同",
+    "intersection": "重慶北路3段與酒泉街口",
+    "direction": "北往東",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 111,
+    "district": "大同",
+    "intersection": "重慶北路3段與民族西路口",
+    "direction": "北往東",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 112,
+    "district": "士林",
+    "intersection": "忠誠路2段與天母東路口",
+    "direction": "南往西",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 113,
+    "district": "士林",
+    "intersection": "中山北路6段與忠誠路1段路口",
+    "direction": "東往南",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 114,
+    "district": "中山",
+    "intersection": "民權東路2段與松江路口",
+    "direction": "南北雙向",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 115,
+    "district": "內湖",
+    "intersection": "成功路2段與新明路口",
+    "direction": "西往北",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 116,
+    "district": "大安",
+    "intersection": "建國南路1段與濟南路口",
+    "direction": "南往西",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 117,
+    "district": "大安",
+    "intersection": "建國南路2段與建國南路2段151巷口",
+    "direction": "南北雙向",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 118,
+    "district": "中山",
+    "intersection": "八德路2段與八德路2段199巷口",
+    "direction": "西往北",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 119,
+    "district": "中山",
+    "intersection": "八德路2段與龍江路口",
+    "direction": "西往北",
+    "opened_year": "113年",
+    "geocoded": false,
+    "geocode_source": null
+  },
+  {
+    "id": 120,
+    "district": "南港",
+    "intersection": "市民大道7段與向陽路口",
+    "direction": "北往東",
+    "opened_year": "113年",
+    "latitude": 25.051892,
+    "longitude": 121.602445,
+    "geocoded": true,
+    "geocode_source": "manual_fix"
+  },
+  {
+    "id": 121,
+    "district": "南港",
+    "intersection": "忠孝東路6段與向陽路口",
+    "direction": "東西雙向",
+    "opened_year": "114年",
+    "geocoded": false,
+    "geocode_source": null
+  }
+]
