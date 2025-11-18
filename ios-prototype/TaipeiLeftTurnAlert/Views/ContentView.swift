@@ -37,8 +37,10 @@ struct ContentView: View {
                 .tag(2)
         }
         .onAppear {
-            // 啟動時載入路口資料
-            IntersectionDataService.shared.loadIntersections()
+            // 啟動時載入路口資料（使用 async 避免在 View 更新期間修改 @Published）
+            DispatchQueue.main.async {
+                IntersectionDataService.shared.loadIntersections()
+            }
         }
     }
 }
