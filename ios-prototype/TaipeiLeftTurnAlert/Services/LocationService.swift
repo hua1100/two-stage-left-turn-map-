@@ -36,7 +36,8 @@ class LocationService: NSObject, ObservableObject {
     // MARK: - Configuration
 
     /// 位置更新距離閾值（公尺）
-    private let distanceFilter: Double = 20.0
+    /// 設定為較小的值以獲得即時速度更新，同時平衡電池消耗
+    private let distanceFilter: Double = 5.0
 
     /// 位置精度
     private let desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyBest

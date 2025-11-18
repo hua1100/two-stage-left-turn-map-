@@ -79,7 +79,10 @@ struct MonitorView: View {
                                                 location.coordinate.longitude))
                         StatusRow(title: "當前方向", value: "\(Int(locationService.currentCourse))°")
                         StatusRow(title: "定位精度", value: "\(Int(location.horizontalAccuracy))m")
-                        StatusRow(title: "速度", value: String(format: "%.1f km/h", location.speed * 3.6))
+
+                        // 速度處理：負值表示無效，顯示為 0
+                        let speed = max(0, location.speed) * 3.6
+                        StatusRow(title: "速度", value: String(format: "%.1f km/h", speed))
                     } else {
                         StatusRow(title: "當前位置", value: "等待定位...")
                     }
