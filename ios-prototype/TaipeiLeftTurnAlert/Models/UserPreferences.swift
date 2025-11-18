@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 /// 使用者偏好設定
 /// 使用 UserDefaults 持久化儲存使用者的個人化設定

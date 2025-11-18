@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 /// 路口資料服務
 /// 負責載入、快取和管理台北市 121 個可直接左轉路口的資料
