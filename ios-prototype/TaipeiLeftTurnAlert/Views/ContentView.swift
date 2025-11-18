@@ -20,7 +20,10 @@ struct ContentView: View {
                     StatusRow(title: "位置權限", value: authorizationStatusText)
 
                     if let location = locationService.currentLocation {
-                        StatusRow(title: "當前位置", value: String(format: "%.6f, %.6f", location.coordinate.latitude, location.coordinate.longitude))
+                        StatusRow(title: "當前位置",
+                                  value: String(format: "%.6f, %.6f",
+                                                location.coordinate.latitude,
+                                                location.coordinate.longitude))
                         StatusRow(title: "當前方向", value: "\(Int(locationService.currentCourse))°")
                         StatusRow(title: "定位精度", value: "\(Int(location.horizontalAccuracy))m")
                     } else {
@@ -80,17 +83,21 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
-                    .disabled(locationService.authorizationStatus != .authorizedAlways &&
-                             locationService.authorizationStatus != .authorizedWhenInUse)
+                    .disabled(!isAuthorized)
                 }
                 .padding()
             }
             .navigationTitle("左轉提示測試")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 
     // MARK: - 輔助屬性
+
+    // iOS 17 授權判斷
+    private var isAuthorized: Bool {
+        locationService.authorizationStatus == .authorizedAlways ||
+        locationService.authorizationStatus == .authorizedWhenInUse
+    }
 
     private var authorizationStatusText: String {
         switch locationService.authorizationStatus {
@@ -164,5 +171,6 @@ struct StatusRow: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 15") // 確保 iOS Preview
     }
 }
