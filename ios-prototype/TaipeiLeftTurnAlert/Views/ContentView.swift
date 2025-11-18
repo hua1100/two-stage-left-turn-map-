@@ -109,13 +109,13 @@ struct ContentView: View {
     private func testVoice() {
         // 建立測試路口
         let testIntersection = Intersection(
-            id: 1,
-            district: "大同",
-            intersection: "承德路與市民大道",
-            direction: "北往東",
-            openedYear: "98年以前",
-            latitude: 25.052856,
-            longitude: 121.516831,
+            id: 45,
+            district: "中正",
+            intersection: "公園路與襄陽路",
+            direction: "南往西、西往北",
+            openedYear: "104年",
+            latitude: 25.046696,
+            longitude: 121.5177415,
             geocoded: true,
             geocodeSource: "test"
         )
@@ -124,7 +124,7 @@ struct ContentView: View {
         let voiceService = VoiceAlertService()
         voiceService.alert(for: testIntersection, distance: 100)
 
-        print("🔊 測試語音：前方一百公尺承德路與市民大道可直接左轉")
+        print("🔊 測試語音：前方一百公尺公園路與襄陽路可直接左轉")
     }
 
     /// 載入測試資料

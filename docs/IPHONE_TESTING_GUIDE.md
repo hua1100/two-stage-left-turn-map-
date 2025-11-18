@@ -405,9 +405,9 @@ struct ContentView_Previews: PreviewProvider {
 // 測試語音按鈕
 Button(action: {
     let testIntersection = Intersection(
-        id: 1, district: "大同", intersection: "承德路與市民大道",
-        direction: "北往東", openedYear: "98年以前",
-        latitude: 25.052856, longitude: 121.516831,
+        id: 45, district: "中正", intersection: "公園路與襄陽路",
+        direction: "南往西、西往北", openedYear: "104年",
+        latitude: 25.046696, longitude: 121.5177415,
         geocoded: true, geocodeSource: "test"
     )
     let voiceService = VoiceAlertService()
@@ -424,7 +424,7 @@ Button(action: {
 
 2. 執行 App（⌘+R）
 3. 點擊「測試語音」按鈕
-4. 聽取語音：「前方一百公尺承德路與市民大道可直接左轉」
+4. 聽取語音：「前方一百公尺公園路與襄陽路可直接左轉」
 
 **預期結果**：
 - ✅ 語音清晰可聽
@@ -475,10 +475,11 @@ App 安裝到 iPhone 後，就像一般 App 可以獨立使用：
    - 開始導航
 
 3. **正常騎車**
-   - 測試路口建議：
+   - 測試路口建議（選擇離您最近的即可）：
+     - 公園路與襄陽路（中正區，台北車站附近）- ID: 45
      - 承德路與市民大道（大同區）- ID: 1
      - 研究院路與南港路二段（南港區）- ID: 2
-     - 復興南路與和平東路（大安區）- ID: 3
+   - **不用特地繞路**，選擇平常會經過的路口即可
 
 4. **驗證警示功能**
 
