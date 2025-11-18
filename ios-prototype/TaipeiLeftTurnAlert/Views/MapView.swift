@@ -26,12 +26,17 @@ struct MapView: View {
             }
             .ignoresSafeArea()
 
-            // 頂部工具列
+            // 頂部工具列與搜尋
             VStack(spacing: 0) {
                 topToolbar
 
                 if showSearchBar {
                     searchBar
+
+                    // 搜尋結果列表
+                    if !viewModel.searchKeyword.isEmpty && !viewModel.filteredIntersections.isEmpty {
+                        searchResultsList
+                    }
                 }
             }
             .background(Color(UIColor.systemBackground).opacity(0.95))
@@ -40,27 +45,23 @@ struct MapView: View {
             .padding(.horizontal)
             .padding(.top, 8)
 
-            // 右側按鈕組
-            VStack(spacing: 12) {
+            // 底部按鈕組
+            VStack {
                 Spacer()
 
-                // 顯示所有路口
-                FloatingButton(icon: "map") {
-                    viewModel.showAllIntersections()
-                }
+                HStack(spacing: 16) {
+                    // 顯示所有路口
+                    FloatingButton(icon: "map") {
+                        viewModel.showAllIntersections()
+                    }
 
-                // 移動到使用者位置
-                FloatingButton(icon: "location.fill") {
-                    viewModel.centerOnUserLocation()
+                    // 移動到使用者位置
+                    FloatingButton(icon: "location.fill") {
+                        viewModel.centerOnUserLocation()
+                    }
                 }
-
-                // 附近路口
-                FloatingButton(icon: "mappin.circle.fill") {
-                    // TODO: 顯示附近路口列表
-                }
+                .padding(.bottom, 16)
             }
-            .padding(.trailing, 16)
-            .padding(.bottom, 16)
         }
         .sheet(isPresented: $viewModel.showIntersectionDetail) {
             if let intersection = viewModel.selectedIntersection {
@@ -148,6 +149,58 @@ struct MapView: View {
         .padding(.horizontal)
         .padding(.bottom, 8)
     }
+
+    /// 搜尋結果列表
+    private var searchResultsList: some View {
+        ScrollView {
+            VStack(spacing: 0) {
+                ForEach(viewModel.filteredIntersections.prefix(10), id: \.id) { intersection in
+                    Button(action: {
+                        // 選擇路口並跳轉
+                        viewModel.selectIntersection(intersection)
+                        // 關閉搜尋欄
+                        showSearchBar = false
+                        viewModel.searchKeyword = ""
+                    }) {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(intersection.displayName)
+                                    .font(.body)
+                                    .foregroundColor(.primary)
+
+                                HStack {
+                                    Text(intersection.district)
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+
+                                    Text("•")
+                                        .foregroundColor(.secondary)
+
+                                    Text(intersection.direction)
+                                        .font(.caption)
+                                        .foregroundColor(.blue)
+                                }
+                            }
+
+                            Spacer()
+
+                            Image(systemName: "arrow.right.circle.fill")
+                                .foregroundColor(.blue)
+                        }
+                        .padding(.horizontal)
+                        .padding(.vertical, 12)
+                    }
+
+                    if intersection.id != viewModel.filteredIntersections.prefix(10).last?.id {
+                        Divider()
+                            .padding(.leading)
+                    }
+                }
+            }
+        }
+        .frame(maxHeight: 300)
+        .padding(.bottom, 8)
+    }
 }
 
 // MARK: - IntersectionMarker
@@ -165,7 +218,7 @@ struct IntersectionMarker: View {
                     .frame(width: 30, height: 30)
                     .shadow(radius: 3)
 
-                Image(systemName: "arrow.triangle.turn.up.right.circle.fill")
+                Image(systemName: "arrow.triangle.turn.up.left.circle.fill")
                     .foregroundColor(.white)
                     .font(.system(size: 16))
             }
