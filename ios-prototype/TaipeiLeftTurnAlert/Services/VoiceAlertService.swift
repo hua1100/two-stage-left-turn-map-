@@ -82,11 +82,11 @@ class VoiceAlertService: NSObject {
         let roundedDistance = Int(distance)
 
         if roundedDistance <= 50 {
-            return "前方\(intersection.displayName)可直接左轉"
+            return "前方可以直接左轉"
         } else if roundedDistance <= 100 {
-            return "前方一百公尺\(intersection.displayName)可直接左轉"
+            return "前方一百公尺可以直接左轉"
         } else {
-            return "前方\(roundedDistance)公尺\(intersection.displayName)可直接左轉"
+            return "前方\(roundedDistance)公尺可以直接左轉"
         }
     }
 
