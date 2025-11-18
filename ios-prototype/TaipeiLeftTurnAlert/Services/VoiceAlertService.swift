@@ -81,12 +81,27 @@ class VoiceAlertService: NSObject {
     private func generateAlertMessage(for intersection: Intersection, distance: Double) -> String {
         let roundedDistance = Int(distance)
 
+        // 提取目標道路名稱
+        let targetRoad = intersection.targetRoadName ?? ""
+
         if roundedDistance <= 50 {
-            return "前方可以直接左轉"
+            if !targetRoad.isEmpty {
+                return "前方可以直接左轉到\(targetRoad)"
+            } else {
+                return "前方可以直接左轉"
+            }
         } else if roundedDistance <= 100 {
-            return "前方一百公尺可以直接左轉"
+            if !targetRoad.isEmpty {
+                return "前方一百公尺可以直接左轉到\(targetRoad)"
+            } else {
+                return "前方一百公尺可以直接左轉"
+            }
         } else {
-            return "前方\(roundedDistance)公尺可以直接左轉"
+            if !targetRoad.isEmpty {
+                return "前方\(roundedDistance)公尺可以直接左轉到\(targetRoad)"
+            } else {
+                return "前方\(roundedDistance)公尺可以直接左轉"
+            }
         }
     }
 

@@ -31,4 +31,16 @@ struct Intersection: Codable, Identifiable {
             .replacingOccurrences(of: "與", with: "和")
         return cleaned
     }
+
+    /// 提取目標道路名稱（「與」後面的道路）
+    /// 用於語音提示「前方可以直接左轉到XX路」
+    var targetRoadName: String? {
+        // 處理格式：「Road A與Road B」→ 提取 Road B
+        if let separatorRange = intersection.range(of: "與") {
+            let roadB = String(intersection[separatorRange.upperBound...])
+            // 移除前後空白
+            return roadB.trimmingCharacters(in: .whitespaces)
+        }
+        return nil
+    }
 }
