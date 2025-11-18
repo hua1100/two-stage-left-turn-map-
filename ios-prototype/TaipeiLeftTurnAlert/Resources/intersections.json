@@ -125,11 +125,11 @@
     "intersection": "堤頂大道與港墘路",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 35.0162879,
-    "longitude": 135.7595533,
+    "latitude": 25.076,
+    "longitude": 121.59,
     "geocoded": true,
-    "geocode_address": "堤頂大道, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_address": "堤頂大道與港墘路, 內湖區, 台北市, 台灣",
+    "geocode_source": "manual_correction"
   },
   {
     "id": 12,
@@ -401,11 +401,11 @@
     "intersection": "松隆路與中坡北路",
     "direction": "西往北",
     "opened_year": "98年以前",
-    "latitude": 35.0162879,
-    "longitude": 135.7595533,
+    "latitude": 25.058,
+    "longitude": 121.57,
     "geocoded": true,
-    "geocode_address": "松隆路, 松山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_address": "松隆路與中坡北路, 松山區, 台北市, 台灣",
+    "geocode_source": "manual_correction"
   },
   {
     "id": 35,
@@ -761,11 +761,11 @@
     "intersection": "東華路與石牌路2段",
     "direction": "南往西",
     "opened_year": "111年",
-    "latitude": 25.0466669,
-    "longitude": 121.5144582,
+    "latitude": 25.115,
+    "longitude": 121.503,
     "geocoded": true,
-    "geocode_address": "東華路, 北投區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_address": "東華路與石牌路二段, 北投區, 台北市, 台灣",
+    "geocode_source": "manual_correction"
   },
   {
     "id": 65,
