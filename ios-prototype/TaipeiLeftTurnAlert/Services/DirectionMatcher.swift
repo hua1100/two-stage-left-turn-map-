@@ -37,15 +37,21 @@ class DirectionMatcher {
 
     // MARK: - 配置參數
 
-    /// 方向匹配容許誤差（度）
-    private let tolerance: Double
+    /// 使用者偏好設定
+    private let preferences = UserPreferences.shared
 
-    /// 觸發警示的距離（公尺）
-    private let alertDistance: Double
+    /// 方向匹配容許誤差（度）- 從使用者偏好讀取
+    private var tolerance: Double {
+        return preferences.directionTolerance
+    }
 
-    init(tolerance: Double = 30.0, alertDistance: Double = 150.0) {
-        self.tolerance = tolerance
-        self.alertDistance = alertDistance
+    /// 觸發警示的距離（公尺）- 從使用者偏好讀取
+    private var alertDistance: Double {
+        return preferences.alertDistance
+    }
+
+    init() {
+        // 設定已移至使用者偏好
     }
 
     // MARK: - 主要判斷邏輯

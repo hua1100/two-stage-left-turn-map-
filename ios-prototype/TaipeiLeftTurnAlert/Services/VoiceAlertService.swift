@@ -9,17 +9,8 @@ class VoiceAlertService: NSObject {
     private let synthesizer = AVSpeechSynthesizer()
     private var audioSession: AVAudioSession?
 
-    /// 是否啟用語音警示
-    var isEnabled: Bool = true
-
-    /// 語速（0.0 - 1.0）
-    var speechRate: Float = 0.5
-
-    /// 音量（0.0 - 1.0）
-    var volume: Float = 1.0
-
-    /// 最小警示間隔時間（秒）- 避免短時間內重複警示
-    private let minimumAlertInterval: TimeInterval = 30.0
+    /// 使用者偏好設定
+    private let preferences = UserPreferences.shared
 
     /// 上次警示的路口 ID
     private var lastAlertedIntersectionId: Int?
@@ -62,13 +53,13 @@ class VoiceAlertService: NSObject {
     ///   - distance: 距離路口的距離（公尺）
     func alert(for intersection: Intersection, distance: Double) {
         // 檢查是否啟用
-        guard isEnabled else { return }
+        guard preferences.voiceEnabled else { return }
 
         // 檢查是否在最小間隔時間內重複警示同一路口
         if let lastId = lastAlertedIntersectionId,
            lastId == intersection.id,
            let lastTime = lastAlertTime,
-           Date().timeIntervalSince(lastTime) < minimumAlertInterval {
+           Date().timeIntervalSince(lastTime) < preferences.minimumAlertInterval {
             print("⏭️ 跳過重複警示: \(intersection.displayName)")
             return
         }
@@ -111,9 +102,9 @@ class VoiceAlertService: NSObject {
         // 設定繁體中文語音
         utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
 
-        // 設定語速和音量
-        utterance.rate = speechRate
-        utterance.volume = volume
+        // 設定語速和音量（從使用者偏好讀取）
+        utterance.rate = preferences.speechRate
+        utterance.volume = preferences.volume
 
         // 稍微降低音調，讓聲音更穩重
         utterance.pitchMultiplier = 0.9
