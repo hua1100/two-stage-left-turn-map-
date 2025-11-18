@@ -8,7 +8,7 @@ struct ContentView: View {
     // MARK: - Properties
 
     @StateObject private var locationService = LocationService.shared
-    @State private var selectedTab = 1  // 預設顯示監控頁面（騎車時最重要）
+    @State private var selectedTab = 1  // 預設顯示騎行頁面（騎車時最重要）
     @State private var showDebugView = false
 
     // MARK: - Body
@@ -22,10 +22,10 @@ struct ContentView: View {
                 }
                 .tag(0)
 
-            // 監控頁面
-            MonitorView()
+            // 騎行頁面
+            RideView()
                 .tabItem {
-                    Label("監控", systemImage: "antenna.radiowaves.left.and.right")
+                    Label("騎行", systemImage: "bicycle")
                 }
                 .tag(1)
 
@@ -45,115 +45,143 @@ struct ContentView: View {
     }
 }
 
-// MARK: - MonitorView
+// MARK: - RideView
 
-/// 監控頁面
-/// 顯示即時定位狀態與監控控制
-struct MonitorView: View {
+/// 騎行頁面
+/// 顯示兩段式左轉路牌與騎行狀態
+struct RideView: View {
 
     // MARK: - Properties
 
     @StateObject private var locationService = LocationService.shared
-    @State private var isMonitoring = false
+    @State private var isRiding = false
 
     // MARK: - Body
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                // 標題
-                Text("即時監控")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding(.top)
+            VStack(spacing: 0) {
+                // 兩段式左轉路牌
+                if !isRiding {
+                    VStack(spacing: 20) {
+                        Spacer()
 
-                // 狀態顯示
-                VStack(alignment: .leading, spacing: 10) {
-                    StatusRow(title: "監控狀態", value: isMonitoring ? "🟢 運行中" : "⚪️ 已停止")
-                    StatusRow(title: "位置權限", value: authorizationStatusText)
+                        // 路牌圖示
+                        twoStageLeftTurnSign
 
-                    if let location = locationService.currentLocation {
-                        StatusRow(title: "當前位置",
-                                  value: String(format: "%.6f, %.6f",
-                                                location.coordinate.latitude,
-                                                location.coordinate.longitude))
-                        StatusRow(title: "當前方向", value: "\(Int(locationService.currentCourse))°")
-                        StatusRow(title: "定位精度", value: "\(Int(location.horizontalAccuracy))m")
+                        Text("台北市兩段式左轉導航")
+                            .font(.title2)
+                            .fontWeight(.bold)
 
-                        // 速度處理：負值表示無效，顯示為 0
-                        let speed = max(0, location.speed) * 3.6
-                        StatusRow(title: "速度", value: String(format: "%.1f km/h", speed))
-                    } else {
-                        StatusRow(title: "當前位置", value: "等待定位...")
+                        Text("開始騎行後，接近可直接左轉路口時會自動語音提示")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 40)
+
+                        Spacer()
                     }
                 }
-                .padding()
-                .background(Color.gray.opacity(0.1))
-                .cornerRadius(10)
-                .padding(.horizontal)
 
-                // 附近路口
-                if isMonitoring {
-                    nearbyIntersectionsSection
-                }
+                // 騎行中的狀態顯示
+                if isRiding {
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            // 狀態資訊
+                            statusInfoSection
 
-                Spacer()
-
-                // 控制按鈕
-                VStack(spacing: 15) {
-                    // 位置權限請求按鈕
-                    if locationService.authorizationStatus == .notDetermined {
-                        Button(action: {
-                            locationService.requestAuthorization()
-                        }) {
-                            Label("請求位置權限", systemImage: "location.circle")
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
+                            // 附近路口
+                            nearbyIntersectionsSection
                         }
+                        .padding(.vertical)
                     }
+                }
 
-                    // 測試語音按鈕
+                // 底部按鈕
+                VStack(spacing: 12) {
                     Button(action: {
-                        testVoice()
+                        toggleRiding()
                     }) {
-                        Label("測試語音", systemImage: "speaker.wave.2")
+                        Label(isRiding ? "停止騎行" : "開始騎行",
+                              systemImage: isRiding ? "stop.circle.fill" : "play.circle.fill")
+                            .font(.headline)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.orange)
+                            .background(isRiding ? Color.red : Color.green)
                             .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .cornerRadius(12)
                     }
-
-                    // 開始/停止監控按鈕
-                    Button(action: {
-                        toggleMonitoring()
-                    }) {
-                        Label(isMonitoring ? "停止監控" : "開始監控",
-                              systemImage: isMonitoring ? "stop.circle" : "play.circle")
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(isMonitoring ? Color.red : Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    .disabled(!isAuthorized)
                 }
                 .padding()
+                .background(Color(UIColor.systemBackground))
+                .shadow(radius: 3)
             }
-            .navigationTitle("路口監控")
+            .navigationTitle("騎行")
             .navigationBarTitleDisplayMode(.inline)
+            .onChange(of: locationService.authorizationStatus) { newStatus in
+                // 當權限狀態改變時，如果剛授予權限且不在騎行中，自動開始
+                if !isRiding && isAuthorized {
+                    startRiding()
+                }
+            }
         }
     }
 
     // MARK: - Subviews
 
+    /// 兩段式左轉路牌圖示
+    private var twoStageLeftTurnSign: some View {
+        ZStack {
+            // 路牌背景
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.green)
+                .frame(width: 200, height: 200)
+                .shadow(radius: 10)
+
+            VStack(spacing: 8) {
+                // 左轉箭頭
+                Image(systemName: "arrow.turn.up.left")
+                    .font(.system(size: 60, weight: .bold))
+                    .foregroundColor(.white)
+
+                // 文字說明
+                VStack(spacing: 4) {
+                    Text("兩段式")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    Text("左轉")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                }
+                .foregroundColor(.white)
+            }
+        }
+    }
+
+    /// 狀態資訊區塊
+    private var statusInfoSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            if let location = locationService.currentLocation {
+                StatusRow(title: "當前方向", value: "\(Int(locationService.currentCourse))°")
+                StatusRow(title: "定位精度", value: "\(Int(location.horizontalAccuracy))m")
+
+                // 速度處理：負值表示無效，顯示為 0
+                let speed = max(0, location.speed) * 3.6
+                StatusRow(title: "速度", value: String(format: "%.1f km/h", speed))
+            } else {
+                StatusRow(title: "定位狀態", value: "等待定位...")
+            }
+        }
+        .padding()
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(10)
+        .padding(.horizontal)
+    }
+
     /// 附近路口區塊
     private var nearbyIntersectionsSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("附近路口")
+            Text("附近可直接左轉路口")
                 .font(.headline)
                 .padding(.horizontal)
 
@@ -161,23 +189,26 @@ struct MonitorView: View {
                 let nearby = findNearbyIntersections(userLocation: userLocation)
 
                 if nearby.isEmpty {
-                    Text("附近沒有可直接左轉的路口")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding()
-                } else {
-                    ScrollView {
-                        VStack(spacing: 8) {
-                            ForEach(nearby, id: \.id) { intersection in
-                                NearbyIntersectionRow(
-                                    intersection: intersection,
-                                    userLocation: userLocation
-                                )
-                            }
-                        }
-                        .padding(.horizontal)
+                    VStack(spacing: 8) {
+                        Image(systemName: "checkmark.circle")
+                            .font(.system(size: 40))
+                            .foregroundColor(.gray)
+                        Text("附近沒有可直接左轉的路口")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
                     }
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding()
+                } else {
+                    VStack(spacing: 8) {
+                        ForEach(nearby, id: \.id) { intersection in
+                            NearbyIntersectionRow(
+                                intersection: intersection,
+                                userLocation: userLocation
+                            )
+                        }
+                    }
+                    .padding(.horizontal)
                 }
             }
         }
@@ -194,54 +225,45 @@ struct MonitorView: View {
         locationService.authorizationStatus == CLAuthorizationStatus.authorizedWhenInUse
     }
 
-    private var authorizationStatusText: String {
-        switch locationService.authorizationStatus {
-        case .notDetermined: return "❓ 未決定"
-        case .restricted: return "🚫 受限"
-        case .denied: return "❌ 拒絕"
-        case .authorizedAlways: return "✅ 始終允許"
-        case .authorizedWhenInUse: return "⚠️ 使用期間"
-        @unknown default: return "❓ 未知"
-        }
-    }
-
     // MARK: - Helper Methods
 
-    /// 測試語音功能
-    private func testVoice() {
-        let testIntersection = Intersection(
-            id: 45,
-            district: "中正",
-            intersection: "公園路與襄陽路",
-            direction: "南往西、西往北",
-            openedYear: "104年",
-            latitude: 25.046696,
-            longitude: 121.5177415,
-            geocoded: true,
-            geocodeSource: "test"
-        )
-
-        let voiceService = VoiceAlertService()
-        voiceService.alert(for: testIntersection, distance: 100)
-
-        print("🔊 測試語音：前方一百公尺公園路與襄陽路可直接左轉")
+    /// 切換騎行狀態
+    private func toggleRiding() {
+        if isRiding {
+            // 停止騎行
+            locationService.stopMonitoring()
+            isRiding = false
+            print("🛑 停止騎行")
+        } else {
+            // 開始騎行
+            // 先檢查權限狀態
+            if locationService.authorizationStatus == .notDetermined {
+                // 沒有權限，先請求
+                locationService.requestAuthorization()
+                // 等待使用者回應後再啟動（透過 LocationService 的 delegate）
+                // 暫時標記為等待中
+                print("📍 請求位置權限...")
+            } else if isAuthorized {
+                // 已有權限，直接開始
+                startRiding()
+            } else {
+                // 權限被拒絕
+                print("❌ 位置權限被拒絕，無法開始騎行")
+            }
+        }
     }
 
-    /// 切換監控狀態
-    private func toggleMonitoring() {
-        if isMonitoring {
-            locationService.stopMonitoring()
-            isMonitoring = false
-        } else {
-            // 載入路口資料
-            let intersections = IntersectionDataService.shared.intersections
-            locationService.loadIntersections(intersections)
+    /// 開始騎行
+    private func startRiding() {
+        // 載入路口資料
+        let intersections = IntersectionDataService.shared.intersections
+        locationService.loadIntersections(intersections)
 
-            locationService.startMonitoring()
-            isMonitoring = true
+        // 開始定位
+        locationService.startMonitoring()
+        isRiding = true
 
-            print("✅ 已載入 \(intersections.count) 個路口，開始監控")
-        }
+        print("✅ 已載入 \(intersections.count) 個路口，開始騎行")
     }
 
     /// 尋找附近路口
