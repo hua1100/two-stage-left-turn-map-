@@ -218,9 +218,9 @@ struct IntersectionMarker: View {
                     .frame(width: 30, height: 30)
                     .shadow(radius: 3)
 
-                Image(systemName: "arrow.triangle.turn.up.left.circle.fill")
+                Image(systemName: "arrow.turn.up.left")
                     .foregroundColor(.white)
-                    .font(.system(size: 16))
+                    .font(.system(size: 14, weight: .bold))
             }
         }
     }
