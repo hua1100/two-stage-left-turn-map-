@@ -1,18 +1,69 @@
 import SwiftUI
 import CoreLocation
 
+/// 主視圖
+/// 使用 TabView 整合地圖、監控與設定頁面
 struct ContentView: View {
-    @StateObject private var locationService = LocationService()
+
+    // MARK: - Properties
+
+    @StateObject private var locationService = LocationService.shared
+    @State private var selectedTab = 0
+    @State private var showDebugView = false
+
+    // MARK: - Body
+
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            // 地圖頁面
+            MapView()
+                .tabItem {
+                    Label("地圖", systemImage: "map.fill")
+                }
+                .tag(0)
+
+            // 監控頁面
+            MonitorView()
+                .tabItem {
+                    Label("監控", systemImage: "antenna.radiowaves.left.and.right")
+                }
+                .tag(1)
+
+            // 設定頁面
+            SettingsView()
+                .tabItem {
+                    Label("設定", systemImage: "gearshape.fill")
+                }
+                .tag(2)
+        }
+        .onAppear {
+            // 啟動時載入路口資料
+            IntersectionDataService.shared.loadIntersections()
+        }
+    }
+}
+
+// MARK: - MonitorView
+
+/// 監控頁面
+/// 顯示即時定位狀態與監控控制
+struct MonitorView: View {
+
+    // MARK: - Properties
+
+    @StateObject private var locationService = LocationService.shared
     @State private var isMonitoring = false
+
+    // MARK: - Body
 
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
                 // 標題
-                Text("台北市機車直接左轉語音提示")
+                Text("即時監控")
                     .font(.title2)
                     .fontWeight(.bold)
-                    .padding()
+                    .padding(.top)
 
                 // 狀態顯示
                 VStack(alignment: .leading, spacing: 10) {
@@ -26,6 +77,7 @@ struct ContentView: View {
                                                 location.coordinate.longitude))
                         StatusRow(title: "當前方向", value: "\(Int(locationService.currentCourse))°")
                         StatusRow(title: "定位精度", value: "\(Int(location.horizontalAccuracy))m")
+                        StatusRow(title: "速度", value: String(format: "%.1f km/h", location.speed * 3.6))
                     } else {
                         StatusRow(title: "當前位置", value: "等待定位...")
                     }
@@ -33,6 +85,12 @@ struct ContentView: View {
                 .padding()
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(10)
+                .padding(.horizontal)
+
+                // 附近路口
+                if isMonitoring {
+                    nearbyIntersectionsSection
+                }
 
                 Spacer()
 
@@ -66,14 +124,7 @@ struct ContentView: View {
 
                     // 開始/停止監控按鈕
                     Button(action: {
-                        if isMonitoring {
-                            locationService.stopMonitoring()
-                            isMonitoring = false
-                        } else {
-                            loadTestData()
-                            locationService.startMonitoring()
-                            isMonitoring = true
-                        }
+                        toggleMonitoring()
                     }) {
                         Label(isMonitoring ? "停止監控" : "開始監控",
                               systemImage: isMonitoring ? "stop.circle" : "play.circle")
@@ -87,13 +138,52 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .navigationTitle("左轉提示測試")
+            .navigationTitle("路口監控")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 
-    // MARK: - 輔助屬性
+    // MARK: - Subviews
 
-    // iOS 17 授權判斷
+    /// 附近路口區塊
+    private var nearbyIntersectionsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("附近路口")
+                .font(.headline)
+                .padding(.horizontal)
+
+            if let userLocation = locationService.currentLocation {
+                let nearby = findNearbyIntersections(userLocation: userLocation)
+
+                if nearby.isEmpty {
+                    Text("附近沒有可直接左轉的路口")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding()
+                } else {
+                    ScrollView {
+                        VStack(spacing: 8) {
+                            ForEach(nearby, id: \.id) { intersection in
+                                NearbyIntersectionRow(
+                                    intersection: intersection,
+                                    userLocation: userLocation
+                                )
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                }
+            }
+        }
+        .padding(.vertical)
+        .background(Color.blue.opacity(0.05))
+        .cornerRadius(12)
+        .padding(.horizontal)
+    }
+
+    // MARK: - Helper Properties
+
     private var isAuthorized: Bool {
         locationService.authorizationStatus == .authorizedAlways ||
         locationService.authorizationStatus == .authorizedWhenInUse
@@ -110,11 +200,10 @@ struct ContentView: View {
         }
     }
 
-    // MARK: - 功能函數
+    // MARK: - Helper Methods
 
     /// 測試語音功能
     private func testVoice() {
-        // 建立測試路口
         let testIntersection = Intersection(
             id: 45,
             district: "中正",
@@ -127,30 +216,93 @@ struct ContentView: View {
             geocodeSource: "test"
         )
 
-        // 發出測試語音
         let voiceService = VoiceAlertService()
         voiceService.alert(for: testIntersection, distance: 100)
 
         print("🔊 測試語音：前方一百公尺公園路與襄陽路可直接左轉")
     }
 
-    /// 載入測試資料
-    private func loadTestData() {
-        // 載入測試資料
-        guard let url = Bundle.main.url(forResource: "intersections", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let intersections = try? JSONDecoder().decode([Intersection].self, from: data) else {
-            print("❌ 無法載入測試資料")
-            return
-        }
+    /// 切換監控狀態
+    private func toggleMonitoring() {
+        if isMonitoring {
+            locationService.stopMonitoring()
+            isMonitoring = false
+        } else {
+            // 載入路口資料
+            let intersections = IntersectionDataService.shared.intersections
+            locationService.loadIntersections(intersections)
 
-        locationService.loadIntersections(intersections)
-        print("✅ 已載入 \(intersections.count) 個路口")
+            locationService.startMonitoring()
+            isMonitoring = true
+
+            print("✅ 已載入 \(intersections.count) 個路口，開始監控")
+        }
+    }
+
+    /// 尋找附近路口
+    private func findNearbyIntersections(userLocation: CLLocation, radius: Double = 1000) -> [Intersection] {
+        let allIntersections = IntersectionDataService.shared.intersections
+
+        return allIntersections.filter { intersection in
+            let distance = userLocation.distance(from: CLLocation(
+                latitude: intersection.latitude,
+                longitude: intersection.longitude
+            ))
+            return distance <= radius
+        }.sorted { a, b in
+            let distanceA = userLocation.distance(from: CLLocation(latitude: a.latitude, longitude: a.longitude))
+            let distanceB = userLocation.distance(from: CLLocation(latitude: b.latitude, longitude: b.longitude))
+            return distanceA < distanceB
+        }.prefix(5).map { $0 }
     }
 }
 
-// MARK: - 狀態列元件
+// MARK: - NearbyIntersectionRow
 
+/// 附近路口列元件
+struct NearbyIntersectionRow: View {
+    let intersection: Intersection
+    let userLocation: CLLocation
+
+    private var distance: Double {
+        userLocation.distance(from: CLLocation(
+            latitude: intersection.latitude,
+            longitude: intersection.longitude
+        ))
+    }
+
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(intersection.displayName)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+
+                Text(intersection.direction)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+
+            Spacer()
+
+            Text("\(Int(distance))m")
+                .font(.caption)
+                .foregroundColor(.blue)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 4)
+                .background(Color.blue.opacity(0.1))
+                .cornerRadius(8)
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(8)
+        .shadow(radius: 2)
+    }
+}
+
+// MARK: - StatusRow
+
+/// 狀態列元件
 struct StatusRow: View {
     let title: String
     let value: String
@@ -166,11 +318,11 @@ struct StatusRow: View {
     }
 }
 
-// MARK: - 預覽
+// MARK: - Preview
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewDevice("iPhone 15") // 確保 iOS Preview
+            .previewDevice("iPhone 15")
     }
 }
