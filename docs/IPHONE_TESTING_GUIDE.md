@@ -397,11 +397,34 @@ struct ContentView_Previews: PreviewProvider {
 
 **目的**：驗證繁體中文語音合成
 
-1. 開啟 Xcode
-2. 開啟 `VoiceAlertServiceTests.swift`
-3. 在 `testChineseVoiceQuality()` 函數中加入斷點
-4. 執行測試（⌘+U）
-5. 聽取語音品質
+**簡易測試方法**（推薦給初學者）：
+
+1. 在 `ContentView.swift` 的「開始監控」按鈕**前面**加入測試按鈕：
+
+```swift
+// 測試語音按鈕
+Button(action: {
+    let testIntersection = Intersection(
+        id: 1, district: "大同", intersection: "承德路與市民大道",
+        direction: "北往東", openedYear: "98年以前",
+        latitude: 25.052856, longitude: 121.516831,
+        geocoded: true, geocodeSource: "test"
+    )
+    let voiceService = VoiceAlertService()
+    voiceService.alert(for: testIntersection, distance: 100)
+}) {
+    Label("測試語音", systemImage: "speaker.wave.2")
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(Color.orange)
+        .foregroundColor(.white)
+        .cornerRadius(10)
+}
+```
+
+2. 執行 App（⌘+R）
+3. 點擊「測試語音」按鈕
+4. 聽取語音：「前方一百公尺承德路與市民大道可直接左轉」
 
 **預期結果**：
 - ✅ 語音清晰可聽
@@ -410,22 +433,48 @@ struct ContentView_Previews: PreviewProvider {
 
 ### 測試 3：實地路測（需要機車）
 
+**📱 重要說明：不需要連接電腦！**
+
+App 安裝到 iPhone 後，就像一般 App 可以獨立使用：
+- ✅ 可以**拔掉傳輸線**獨立運行
+- ✅ 不需要帶著電腦或開著 Xcode
+- ✅ 可以背景執行，重開機後仍然存在
+- ⚠️ **有效期限**：免費 Apple ID 安裝的 App 會在 **7 天後過期**，需重新連接電腦安裝
+
 **⚠️ 安全警告**：
 - 請在允許測試的安全道路上進行
 - 建議由副駕駛或乘客操作裝置
 - 遵守交通規則，安全第一
+- **絕對不要帶著電腦騎車！**
 
 **目的**：驗證真實環境下的語音警示
 
-1. **開啟 Google Maps 導航**
+**準備階段（在家裡）**：
+
+1. **安裝 App 到 iPhone**
+   - iPhone 連接 Mac，在 Xcode 執行 App
+   - 確認 App 正常啟動
+
+2. **測試基本功能**
+   - 測試位置權限
+   - 測試語音功能
+   - 確認一切正常
+
+3. **拔掉傳輸線**
+   - 關閉 Xcode
+   - Mac 可以留在家裡
+
+**實地測試階段（騎車時）**：
+
+1. **開啟測試 App**
+   - 點擊「開始監控」
+   - 確認狀態變為「🟢 運行中」
+
+2. **切換到 Google Maps**
    - 設定目的地，經過測試路口
    - 開始導航
 
-2. **切換到測試 App**
-   - 點擊「開始監控」
-   - 切回 Google Maps
-
-3. **騎車經過測試路口**
+3. **正常騎車**
    - 測試路口建議：
      - 承德路與市民大道（大同區）- ID: 1
      - 研究院路與南港路二段（南港區）- ID: 2
