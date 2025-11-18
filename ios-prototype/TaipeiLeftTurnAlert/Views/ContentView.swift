@@ -8,7 +8,7 @@ struct ContentView: View {
     // MARK: - Properties
 
     @StateObject private var locationService = LocationService.shared
-    @State private var selectedTab = 0
+    @State private var selectedTab = 1  // 預設顯示監控頁面（騎車時最重要）
     @State private var showDebugView = false
 
     // MARK: - Body
