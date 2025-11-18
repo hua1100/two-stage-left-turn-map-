@@ -277,6 +277,7 @@ struct NearbyIntersectionRow: View {
                 Text(intersection.displayName)
                     .font(.subheadline)
                     .fontWeight(.medium)
+                    .foregroundColor(.primary)  // 加入明確的顏色
 
                 Text(intersection.direction)
                     .font(.caption)
@@ -294,7 +295,7 @@ struct NearbyIntersectionRow: View {
                 .cornerRadius(8)
         }
         .padding()
-        .background(Color.white)
+        .background(Color(UIColor.systemBackground))  // 使用系統背景色
         .cornerRadius(8)
         .shadow(radius: 2)
     }

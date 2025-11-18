@@ -34,7 +34,7 @@ struct MapView: View {
                     searchBar
                 }
             }
-            .background(Color.white.opacity(0.95))
+            .background(Color(UIColor.systemBackground).opacity(0.95))
             .cornerRadius(12)
             .shadow(radius: 5)
             .padding(.horizontal)
@@ -127,22 +127,23 @@ struct MapView: View {
     private var searchBar: some View {
         HStack {
             Image(systemName: "magnifyingglass")
-                .foregroundColor(.gray)
+                .foregroundColor(.secondary)
 
             TextField("搜尋路口名稱", text: $viewModel.searchKeyword)
                 .textFieldStyle(PlainTextFieldStyle())
+                .foregroundColor(.primary)
 
             if !viewModel.searchKeyword.isEmpty {
                 Button {
                     viewModel.searchKeyword = ""
                 } label: {
                     Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.secondary)
                 }
             }
         }
         .padding(8)
-        .background(Color.gray.opacity(0.1))
+        .background(Color(UIColor.secondarySystemBackground))
         .cornerRadius(8)
         .padding(.horizontal)
         .padding(.bottom, 8)

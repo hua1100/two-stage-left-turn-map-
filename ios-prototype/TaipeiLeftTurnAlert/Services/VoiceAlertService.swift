@@ -92,6 +92,15 @@ class VoiceAlertService: NSObject {
 
     /// 發出語音
     private func speak(_ text: String) {
+        // 確保音訊會話已啟動
+        do {
+            try audioSession?.setActive(true, options: .notifyOthersOnDeactivation)
+            print("✅ 音訊會話已啟動")
+        } catch {
+            print("❌ 音訊會話啟動失敗: \(error.localizedDescription)")
+            return
+        }
+
         // 停止當前正在播放的語音
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
@@ -108,6 +117,9 @@ class VoiceAlertService: NSObject {
 
         // 稍微降低音調，讓聲音更穩重
         utterance.pitchMultiplier = 0.9
+
+        print("🔊 即將播放語音: \"\(text)\"")
+        print("📊 語速: \(utterance.rate), 音量: \(utterance.volume)")
 
         // 發音
         synthesizer.speak(utterance)
