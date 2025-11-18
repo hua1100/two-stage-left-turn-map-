@@ -5,6 +5,10 @@ import Combine
 /// 位置服務：管理背景位置追蹤與路口監控
 class LocationService: NSObject, ObservableObject {
 
+    // MARK: - Singleton
+
+    static let shared = LocationService()
+
     // MARK: - Published Properties
 
     @Published var currentLocation: CLLocation?

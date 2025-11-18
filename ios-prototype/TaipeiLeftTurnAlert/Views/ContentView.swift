@@ -185,8 +185,8 @@ struct MonitorView: View {
     // MARK: - Helper Properties
 
     private var isAuthorized: Bool {
-        locationService.authorizationStatus == .authorizedAlways ||
-        locationService.authorizationStatus == .authorizedWhenInUse
+        locationService.authorizationStatus == CLAuthorizationStatus.authorizedAlways ||
+        locationService.authorizationStatus == CLAuthorizationStatus.authorizedWhenInUse
     }
 
     private var authorizationStatusText: String {
