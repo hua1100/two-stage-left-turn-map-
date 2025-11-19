@@ -120,8 +120,11 @@ struct RideView: View {
             .navigationBarTitleDisplayMode(.inline)
             .onChange(of: locationService.authorizationStatus) { newStatus in
                 // 當權限狀態改變時，如果剛授予權限且不在騎行中，自動開始
+                // 使用 async 避免在視圖更新中發布變更
                 if !isRiding && isAuthorized {
-                    startRiding()
+                    DispatchQueue.main.async {
+                        startRiding()
+                    }
                 }
             }
         }
