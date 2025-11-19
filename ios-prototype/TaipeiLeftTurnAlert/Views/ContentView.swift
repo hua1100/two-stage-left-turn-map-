@@ -134,32 +134,11 @@ struct RideView: View {
 
     /// 兩段式左轉路牌圖示
     private var twoStageLeftTurnSign: some View {
-        ZStack {
-            // 路牌背景
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color.green)
-                .frame(width: 200, height: 200)
-                .shadow(radius: 10)
-
-            VStack(spacing: 8) {
-                // 左轉箭頭（自訂圖片）
-                Image("Logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 80, height: 80)
-
-                // 文字說明
-                VStack(spacing: 4) {
-                    Text("兩段式")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                    Text("左轉")
-                        .font(.title2)
-                        .fontWeight(.heavy)
-                }
-                .foregroundColor(.white)
-            }
-        }
+        Image("Logo")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 200, height: 200)
+            .shadow(radius: 10)
     }
 
     /// 狀態資訊區塊
