@@ -142,10 +142,11 @@ struct RideView: View {
                 .shadow(radius: 10)
 
             VStack(spacing: 8) {
-                // 左轉箭頭
-                Image(systemName: "arrow.turn.up.left")
-                    .font(.system(size: 60, weight: .bold))
-                    .foregroundColor(.white)
+                // 左轉箭頭（自訂圖片）
+                Image("Logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 80, height: 80)
 
                 // 文字說明
                 VStack(spacing: 4) {
