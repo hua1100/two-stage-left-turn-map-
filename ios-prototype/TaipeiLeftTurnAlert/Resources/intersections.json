@@ -41,11 +41,11 @@
     "intersection": "中山北路與天母東西路",
     "direction": "南北雙向",
     "opened_year": "98年以前",
-    "latitude": 25.1297818,
-    "longitude": 121.5369994,
+    "latitude": 25.1183079,
+    "longitude": 121.5301719,
     "geocoded": true,
     "geocode_address": "中山北路, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 5,
@@ -101,11 +101,11 @@
     "intersection": "成功路與康湖路",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 25.0831849,
-    "longitude": 121.5980243,
+    "latitude": 25.0784078,
+    "longitude": 121.6061534,
     "geocoded": true,
     "geocode_address": "成功路, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 10,
@@ -113,11 +113,11 @@
     "intersection": "成功路與文德路",
     "direction": "南往西、東往南",
     "opened_year": "98年以前",
-    "latitude": 25.0831849,
-    "longitude": 121.5980243,
+    "latitude": 25.0642493,
+    "longitude": 121.5656793,
     "geocoded": true,
     "geocode_address": "成功路, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 11,
@@ -125,11 +125,11 @@
     "intersection": "堤頂大道與港墘路",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 25.076,
-    "longitude": 121.59,
+    "latitude": 25.0746157,
+    "longitude": 121.5722056,
     "geocoded": true,
     "geocode_address": "堤頂大道與港墘路, 內湖區, 台北市, 台灣",
-    "geocode_source": "manual_correction"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 12,
@@ -137,11 +137,11 @@
     "intersection": "康寧路3段與康寧路3段75巷",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 25.0725951,
-    "longitude": 121.6072763,
+    "latitude": 25.0736771,
+    "longitude": 121.6095808,
     "geocoded": true,
     "geocode_address": "康寧路3段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 13,
@@ -149,11 +149,11 @@
     "intersection": "康寧路3段與康寧路3段165巷",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 25.0725951,
-    "longitude": 121.6072763,
+    "latitude": 25.0707379,
+    "longitude": 121.6115917,
     "geocoded": true,
     "geocode_address": "康寧路3段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 14,
@@ -161,11 +161,11 @@
     "intersection": "康寧路3段與東湖路",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 25.0725951,
-    "longitude": 121.6072763,
+    "latitude": 25.0688609,
+    "longitude": 121.6120398,
     "geocoded": true,
     "geocode_address": "康寧路3段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 15,
@@ -173,11 +173,11 @@
     "intersection": "康寧路3段與五分街",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 25.0725951,
-    "longitude": 121.6072763,
+    "latitude": 25.0678081,
+    "longitude": 121.6117493,
     "geocoded": true,
     "geocode_address": "康寧路3段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 16,
@@ -221,11 +221,11 @@
     "intersection": "水源路與泉州街",
     "direction": "東往西",
     "opened_year": "98年以前",
-    "latitude": 25.0241222,
-    "longitude": 121.5133445,
+    "latitude": 25.0241844,
+    "longitude": 121.5123676,
     "geocoded": true,
     "geocode_address": "水源路, 中正區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 20,
@@ -233,11 +233,11 @@
     "intersection": "水源路與師大路",
     "direction": "南往北",
     "opened_year": "98年以前",
-    "latitude": 25.0241222,
-    "longitude": 121.5133445,
+    "latitude": 25.0203461,
+    "longitude": 121.5226461,
     "geocoded": true,
     "geocode_address": "水源路, 中正區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 21,
@@ -305,11 +305,11 @@
     "intersection": "信義路與松德路",
     "direction": "北往南",
     "opened_year": "98年以前",
-    "latitude": 25.0349596,
-    "longitude": 121.5739631,
+    "latitude": 25.0341941,
+    "longitude": 121.5729886,
     "geocoded": true,
     "geocode_address": "信義路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 27,
@@ -317,11 +317,11 @@
     "intersection": "忠孝東路與松仁路",
     "direction": "南往西",
     "opened_year": "98年以前",
-    "latitude": 25.0460846,
-    "longitude": 121.5306665,
+    "latitude": 25.0331612,
+    "longitude": 121.5685816,
     "geocoded": true,
     "geocode_address": "忠孝東路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 28,
@@ -329,11 +329,11 @@
     "intersection": "光復南路與基隆路",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 25.031365,
-    "longitude": 121.5574781,
+    "latitude": 25.0331366,
+    "longitude": 121.5587079,
     "geocoded": true,
     "geocode_address": "光復南路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 29,
@@ -341,11 +341,11 @@
     "intersection": "仁愛路與市府路",
     "direction": "西往北",
     "opened_year": "98年以前",
-    "latitude": 25.0375387,
-    "longitude": 121.5627834,
+    "latitude": 25.0375325,
+    "longitude": 121.5635402,
     "geocoded": true,
     "geocode_address": "仁愛路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 30,
@@ -353,11 +353,11 @@
     "intersection": "松隆路與基隆路",
     "direction": "東往南",
     "opened_year": "98年以前",
-    "latitude": 25.0440554,
-    "longitude": 121.5683128,
+    "latitude": 25.0433721,
+    "longitude": 121.5658251,
     "geocoded": true,
     "geocode_address": "松隆路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 31,
@@ -365,11 +365,11 @@
     "intersection": "松壽路與松仁路",
     "direction": "西往北",
     "opened_year": "98年以前",
-    "latitude": 25.0359383,
-    "longitude": 121.5617307,
+    "latitude": 25.0342727,
+    "longitude": 121.5666349,
     "geocoded": true,
     "geocode_address": "松壽路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 32,
@@ -377,11 +377,11 @@
     "intersection": "松山路與松德路",
     "direction": "西往北",
     "opened_year": "98年以前",
-    "latitude": 25.0323478,
-    "longitude": 121.5787438,
+    "latitude": 25.0396242,
+    "longitude": 121.5777454,
     "geocoded": true,
     "geocode_address": "松山路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 33,
@@ -389,11 +389,11 @@
     "intersection": "仁愛路與逸仙路",
     "direction": "北往南",
     "opened_year": "98年以前",
-    "latitude": 25.0375387,
-    "longitude": 121.5627834,
+    "latitude": 25.0374696,
+    "longitude": 121.5615152,
     "geocoded": true,
     "geocode_address": "仁愛路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 34,
@@ -473,11 +473,11 @@
     "intersection": "大直橋與北安路",
     "direction": "東往西",
     "opened_year": "98年以前",
-    "latitude": 25.0758852,
-    "longitude": 121.5443694,
+    "latitude": 25.0796658,
+    "longitude": 121.5443596,
     "geocoded": true,
     "geocode_address": "大直橋, 中山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 41,
@@ -485,11 +485,11 @@
     "intersection": "中山北路與通河街",
     "direction": "西往東",
     "opened_year": "98年以前",
-    "latitude": 25.0494348,
-    "longitude": 121.5380675,
+    "latitude": 25.0798482,
+    "longitude": 121.5243199,
     "geocoded": true,
     "geocode_address": "中山北路, 中山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 42,
@@ -497,11 +497,11 @@
     "intersection": "民族東路與復興北路",
     "direction": "北往南",
     "opened_year": "98年以前",
-    "latitude": 25.0682339,
-    "longitude": 121.5372649,
+    "latitude": 25.0663033,
+    "longitude": 121.5443871,
     "geocoded": true,
     "geocode_address": "民族東路, 中山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 43,
@@ -509,11 +509,11 @@
     "intersection": "忠孝東路與八德路",
     "direction": "西往北",
     "opened_year": "102年",
-    "latitude": 25.0436441,
-    "longitude": 121.5271131,
+    "latitude": 25.0484129,
+    "longitude": 121.5487821,
     "geocoded": true,
     "geocode_address": "忠孝東路, 中正區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 44,
@@ -533,11 +533,11 @@
     "intersection": "公園路與襄陽路",
     "direction": "南往西、西往北",
     "opened_year": "104年",
-    "latitude": 25.046696,
-    "longitude": 121.5177415,
+    "latitude": 25.0433558,
+    "longitude": 121.5166607,
     "geocoded": true,
     "geocode_address": "公園路, 中正區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 46,
@@ -557,11 +557,11 @@
     "intersection": "信義路5段與基隆路2段路",
     "direction": "東往南",
     "opened_year": "106年",
-    "latitude": 25.0328403,
-    "longitude": 121.5734146,
+    "latitude": 25.032989,
+    "longitude": 121.5596793,
     "geocoded": true,
     "geocode_address": "信義路5段, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 48,
@@ -653,11 +653,11 @@
     "intersection": "三元街與寧波西街",
     "direction": "西往北",
     "opened_year": "108年",
-    "latitude": 25.0279477,
-    "longitude": 121.5115333,
+    "latitude": 25.0280052,
+    "longitude": 121.511388,
     "geocoded": true,
     "geocode_address": "三元街, 中正區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 56,
@@ -689,11 +689,11 @@
     "intersection": "市府路與松壽路",
     "direction": "南往西",
     "opened_year": "109年",
-    "latitude": 25.0344649,
-    "longitude": 121.5634559,
+    "latitude": 25.0359038,
+    "longitude": 121.5635845,
     "geocoded": true,
     "geocode_address": "市府路, 信義區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 59,
@@ -1361,11 +1361,11 @@
     "intersection": "民權東路2段與松江路口",
     "direction": "南北雙向",
     "opened_year": "113年",
-    "latitude": 25.06256,
-    "longitude": 121.533808,
+    "latitude": 25.0581701,
+    "longitude": 121.5318353,
     "geocoded": true,
     "geocode_address": "民權東路2段, 中山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 115,
@@ -1409,11 +1409,11 @@
     "intersection": "八德路2段與八德路2段199巷口",
     "direction": "西往北",
     "opened_year": "113年",
-    "latitude": 25.0458751,
-    "longitude": 121.5359349,
+    "latitude": 25.0490776,
+    "longitude": 121.56061,
     "geocoded": true,
     "geocode_address": "八德路2段, 中山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 119,
@@ -1421,11 +1421,11 @@
     "intersection": "八德路2段與龍江路口",
     "direction": "西往北",
     "opened_year": "113年",
-    "latitude": 25.0458751,
-    "longitude": 121.5359349,
+    "latitude": 25.0467545,
+    "longitude": 121.5404769,
     "geocoded": true,
     "geocode_address": "八德路2段, 中山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 120,
