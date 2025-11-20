@@ -9,7 +9,7 @@
     "longitude": 121.51626,
     "geocoded": true,
     "geocode_address": "承德路, 大同區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "longitude": 121.5361246,
     "geocoded": true,
     "geocode_address": "福林路, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 3,
@@ -29,11 +29,11 @@
     "intersection": "文昌路與中正路",
     "direction": "北往東",
     "opened_year": "98年以前",
-    "latitude": 25.0976497,
-    "longitude": 121.5204657,
+    "latitude": 25.0943616,
+    "longitude": 121.5219115,
     "geocoded": true,
     "geocode_address": "文昌路, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 4,
@@ -57,7 +57,7 @@
     "longitude": 121.5281056,
     "geocoded": true,
     "geocode_address": "中山北路5段, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "longitude": 121.508276,
     "geocoded": true,
     "geocode_address": null,
-    "geocode_source": "manual_fix"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 7,
@@ -77,11 +77,11 @@
     "intersection": "忠孝東路與研究院路",
     "direction": "南往西、西往北",
     "opened_year": "98年以前",
-    "latitude": 25.0523197,
-    "longitude": 121.6077722,
+    "latitude": 25.0465069,
+    "longitude": 121.583796,
     "geocoded": true,
     "geocode_address": "忠孝東路, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 8,
@@ -89,11 +89,11 @@
     "intersection": "南港路與經貿一路",
     "direction": "北往南",
     "opened_year": "98年以前",
-    "latitude": 25.0546338,
-    "longitude": 121.618322,
+    "latitude": 25.0549067,
+    "longitude": 121.6186691,
     "geocoded": true,
     "geocode_address": "南港路, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 9,
@@ -185,11 +185,11 @@
     "intersection": "康寧路3段與康寧路3段70巷",
     "direction": "南往西",
     "opened_year": "98年以前",
-    "latitude": 25.0725951,
-    "longitude": 121.6072763,
+    "latitude": 25.069414,
+    "longitude": 121.6106077,
     "geocoded": true,
     "geocode_address": "康寧路3段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 17,
@@ -197,11 +197,11 @@
     "intersection": "康寧路3段與康寧路3段16巷(南路口)",
     "direction": "南往西",
     "opened_year": "98年以前",
-    "latitude": 25.0725951,
-    "longitude": 121.6072763,
+    "latitude": 25.0715984,
+    "longitude": 121.6096204,
     "geocoded": true,
     "geocode_address": "康寧路3段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 18,
@@ -209,11 +209,11 @@
     "intersection": "康寧路3段與康寧路3段16巷(北路口)",
     "direction": "南往西",
     "opened_year": "98年以前",
-    "latitude": 25.0725951,
-    "longitude": 121.6072763,
+    "latitude": 25.0727605,
+    "longitude": 121.6068832,
     "geocoded": true,
     "geocode_address": "康寧路3段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 19,
@@ -245,11 +245,11 @@
     "intersection": "中華路與艋舺大道",
     "direction": "北往南",
     "opened_year": "98年以前",
-    "latitude": 25.0167458,
-    "longitude": 121.4948625,
+    "latitude": 25.0373042,
+    "longitude": 121.5024883,
     "geocoded": true,
     "geocode_address": "中華路, 萬華區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 22,
@@ -269,11 +269,11 @@
     "intersection": "基隆路2段與敦化南路2段",
     "direction": "西往北",
     "opened_year": "98年以前",
-    "latitude": 25.0216767,
-    "longitude": 121.549618,
+    "latitude": 25.0213171,
+    "longitude": 121.5492502,
     "geocoded": true,
     "geocode_address": "基隆路2段, 大安區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 24,
@@ -281,11 +281,11 @@
     "intersection": "新生南路3段與羅斯福路4段",
     "direction": "東往南",
     "opened_year": "98年以前",
-    "latitude": 25.0254663,
-    "longitude": 121.5348698,
+    "latitude": 25.0163843,
+    "longitude": 121.5327354,
     "geocoded": true,
     "geocode_address": "新生南路3段, 大安區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 25,
@@ -293,11 +293,11 @@
     "intersection": "辛亥路與建國南路",
     "direction": "南往西",
     "opened_year": "98年以前",
-    "latitude": 25.0178627,
-    "longitude": 121.5479361,
+    "latitude": 25.0158109,
+    "longitude": 121.5448524,
     "geocoded": true,
     "geocode_address": "辛亥路, 大安區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 26,
@@ -413,11 +413,11 @@
     "intersection": "松山路與永吉路",
     "direction": "南往北",
     "opened_year": "98年以前",
-    "latitude": 25.0500572,
-    "longitude": 121.577734,
+    "latitude": 25.045393,
+    "longitude": 121.5777326,
     "geocoded": true,
     "geocode_address": "松山路, 松山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 36,
@@ -429,7 +429,7 @@
     "longitude": 121.5690399,
     "geocoded": true,
     "geocode_address": "塔悠路, 松山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 37,
@@ -437,11 +437,11 @@
     "intersection": "塔悠路與松信路",
     "direction": "北往南",
     "opened_year": "98年以前",
-    "latitude": 25.0586401,
-    "longitude": 121.5690399,
+    "latitude": 25.0499064,
+    "longitude": 121.5721546,
     "geocoded": true,
     "geocode_address": "塔悠路, 松山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 38,
@@ -449,11 +449,11 @@
     "intersection": "光復北路與南京東路5段",
     "direction": "南往北",
     "opened_year": "98年以前",
-    "latitude": 25.0498423,
-    "longitude": 121.5578001,
+    "latitude": 25.0514758,
+    "longitude": 121.5573481,
     "geocoded": true,
     "geocode_address": "光復北路, 松山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 39,
@@ -461,11 +461,11 @@
     "intersection": "光復北路與南京東路5段",
     "direction": "南往北",
     "opened_year": "98年以前",
-    "latitude": 25.0498423,
-    "longitude": 121.5578001,
+    "latitude": 25.0514758,
+    "longitude": 121.5573481,
     "geocoded": true,
     "geocode_address": "光復北路, 松山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 40,
@@ -521,11 +521,11 @@
     "intersection": "立賢路與承德路7段",
     "direction": "南往西",
     "opened_year": "103年",
-    "latitude": 25.1147409,
-    "longitude": 121.5030666,
+    "latitude": 25.1162428,
+    "longitude": 121.5052192,
     "geocoded": true,
     "geocode_address": "立賢路, 北投區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 45,
@@ -573,7 +573,7 @@
     "longitude": 121.5211934,
     "geocoded": true,
     "geocode_address": "福國路, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 49,
@@ -581,11 +581,11 @@
     "intersection": "大業路與承德路7段",
     "direction": "北往東",
     "opened_year": "108年",
-    "latitude": 25.1353573,
-    "longitude": 121.4968243,
+    "latitude": 25.1211632,
+    "longitude": 121.4997578,
     "geocoded": true,
     "geocode_address": "大業路, 北投區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 50,
@@ -593,11 +593,11 @@
     "intersection": "大度路與立德路",
     "direction": "西往北",
     "opened_year": "108年",
-    "latitude": 25.1218813,
-    "longitude": 121.4860757,
+    "latitude": 25.122925,
+    "longitude": 121.4706772,
     "geocoded": true,
     "geocode_address": "大度路, 北投區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 51,
@@ -605,11 +605,11 @@
     "intersection": "大業路與大業路65巷",
     "direction": "北往東",
     "opened_year": "108年",
-    "latitude": 25.1353573,
-    "longitude": 121.4968243,
+    "latitude": 25.1232658,
+    "longitude": 121.499351,
     "geocoded": true,
     "geocode_address": "大業路, 北投區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 52,
@@ -629,11 +629,11 @@
     "intersection": "和平東路3段與和平東路3段346巷",
     "direction": "西往北",
     "opened_year": "108年",
-    "latitude": 25.0181874,
-    "longitude": 121.5586789,
+    "latitude": 25.0245007,
+    "longitude": 121.5487255,
     "geocoded": true,
     "geocode_address": "和平東路3段, 大安區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 54,
@@ -645,7 +645,7 @@
     "longitude": 121.5741311,
     "geocoded": true,
     "geocode_address": "木柵路, 文山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 55,
@@ -677,11 +677,11 @@
     "intersection": "民權西路與延平北路",
     "direction": "東往南",
     "opened_year": "109年",
-    "latitude": 25.0628506,
-    "longitude": 121.519403,
+    "latitude": 25.060057,
+    "longitude": 121.5148071,
     "geocoded": true,
     "geocode_address": "民權西路, 大同區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 58,
@@ -701,11 +701,11 @@
     "intersection": "中正路與文林路",
     "direction": "東西雙向",
     "opened_year": "109年",
-    "latitude": 25.0939161,
-    "longitude": 121.5209595,
+    "latitude": 25.0950624,
+    "longitude": 121.5246169,
     "geocoded": true,
     "geocode_address": "中正路, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 60,
@@ -717,7 +717,7 @@
     "longitude": 121.5209595,
     "geocoded": true,
     "geocode_address": "中正路, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 61,
@@ -729,7 +729,7 @@
     "longitude": 121.5209595,
     "geocoded": true,
     "geocode_address": "中正路, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 62,
@@ -737,11 +737,11 @@
     "intersection": "大度路3段與中央北路",
     "direction": "北往東",
     "opened_year": "110年",
-    "latitude": 25.1229627,
-    "longitude": 121.4694513,
+    "latitude": 25.1276212,
+    "longitude": 121.4705774,
     "geocoded": true,
     "geocode_address": "大度路3段, 北投區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 63,
@@ -749,11 +749,11 @@
     "intersection": "基湖路與瑞光路",
     "direction": "北往東",
     "opened_year": "111年",
-    "latitude": 25.0823755,
-    "longitude": 121.565521,
+    "latitude": 25.0808439,
+    "longitude": 121.5650299,
     "geocoded": true,
     "geocode_address": "基湖路, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 64,
@@ -761,11 +761,11 @@
     "intersection": "東華路與石牌路2段",
     "direction": "南往西",
     "opened_year": "111年",
-    "latitude": 25.115,
-    "longitude": 121.503,
+    "latitude": 25.1186941,
+    "longitude": 121.5167187,
     "geocoded": true,
     "geocode_address": "東華路與石牌路二段, 北投區, 台北市, 台灣",
-    "geocode_source": "manual_correction"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 65,
@@ -773,11 +773,11 @@
     "intersection": "金山南路與和平東路",
     "direction": "北往東、西往北",
     "opened_year": "98年以前、111年",
-    "latitude": 25.0328786,
-    "longitude": 121.52846,
+    "latitude": 25.0268944,
+    "longitude": 121.525831,
     "geocoded": true,
     "geocode_address": "金山南路, 大安區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 66,
@@ -785,11 +785,11 @@
     "intersection": "塔悠路與民生東路口",
     "direction": "西往北",
     "opened_year": "111年",
-    "latitude": 25.0586401,
-    "longitude": 121.5690399,
+    "latitude": 25.0592928,
+    "longitude": 121.5495113,
     "geocoded": true,
     "geocode_address": "塔悠路, 松山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 67,
@@ -797,11 +797,11 @@
     "intersection": "舊宗路1段與新湖二路口",
     "direction": "南北雙向",
     "opened_year": "111年",
-    "latitude": 25.0577793,
-    "longitude": 121.5811045,
+    "latitude": 25.0618416,
+    "longitude": 121.5781031,
     "geocoded": true,
     "geocode_address": "舊宗路1段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 68,
@@ -809,11 +809,11 @@
     "intersection": "舊宗路1段與新湖三路口",
     "direction": "南北雙向",
     "opened_year": "111年",
-    "latitude": 25.0577793,
-    "longitude": 121.5811045,
+    "latitude": 25.0605717,
+    "longitude": 121.578105,
     "geocoded": true,
     "geocode_address": "舊宗路1段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 69,
@@ -825,7 +825,7 @@
     "longitude": 121.5209595,
     "geocoded": true,
     "geocode_address": "中正路, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 70,
@@ -857,11 +857,11 @@
     "intersection": "內湖路一段與內湖路一段203巷口",
     "direction": "東西雙向",
     "opened_year": "112年",
-    "latitude": 25.0787253,
-    "longitude": 121.5783972,
+    "latitude": 25.0845889,
+    "longitude": 121.5649344,
     "geocoded": true,
     "geocode_address": "內湖路一段, 內湖區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 73,
@@ -957,7 +957,7 @@
     "longitude": 121.553158,
     "geocoded": true,
     "geocode_address": null,
-    "geocode_source": "manual_fix"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 81,
@@ -977,11 +977,11 @@
     "intersection": "忠孝東路6段與向陽路口",
     "direction": "北往東",
     "opened_year": "112年",
-    "latitude": 25.0467209,
-    "longitude": 121.5838284,
+    "latitude": 25.0517589,
+    "longitude": 121.5790777,
     "geocoded": true,
     "geocode_address": "忠孝東路6段, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 83,
@@ -989,11 +989,11 @@
     "intersection": "忠孝東路6段與東新街口",
     "direction": "西往北",
     "opened_year": "112年",
-    "latitude": 25.0467209,
-    "longitude": 121.5838284,
+    "latitude": 25.0460833,
+    "longitude": 121.5670777,
     "geocoded": true,
     "geocode_address": "忠孝東路6段, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 84,
@@ -1001,11 +1001,11 @@
     "intersection": "忠孝東路6段與玉成街口",
     "direction": "西往北",
     "opened_year": "112年",
-    "latitude": 25.0467209,
-    "longitude": 121.5838284,
+    "latitude": 25.0467471,
+    "longitude": 121.5828496,
     "geocoded": true,
     "geocode_address": "忠孝東路6段, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 85,
@@ -1017,7 +1017,7 @@
     "longitude": 121.51626,
     "geocoded": true,
     "geocode_address": "承德路, 大同區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 86,
@@ -1037,11 +1037,11 @@
     "intersection": "八德路與松山路口",
     "direction": "西往北",
     "opened_year": "112年",
-    "latitude": 25.0486924,
-    "longitude": 121.5636925,
+    "latitude": 25.0437816,
+    "longitude": 121.5502265,
     "geocoded": true,
     "geocode_address": "八德路, 松山區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 88,
@@ -1241,11 +1241,11 @@
     "intersection": "南港路1段與研究院路1段路口",
     "direction": "東往南",
     "opened_year": "112年",
-    "latitude": 25.0550438,
-    "longitude": 121.6176836,
+    "latitude": 25.0549067,
+    "longitude": 121.6186691,
     "geocoded": true,
     "geocode_address": "南港路1段, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 105,
@@ -1253,11 +1253,11 @@
     "intersection": "南港路3段與向陽路口",
     "direction": "東西雙向",
     "opened_year": "112年",
-    "latitude": 25.0516129,
-    "longitude": 121.581769,
+    "latitude": 25.0563809,
+    "longitude": 121.6055566,
     "geocoded": true,
     "geocode_address": "南港路3段, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 106,
@@ -1265,11 +1265,11 @@
     "intersection": "重陽路與向陽路口",
     "direction": "東往南",
     "opened_year": "112年",
-    "latitude": 25.058537,
-    "longitude": 121.6084347,
+    "latitude": 25.054857,
+    "longitude": 121.5994259,
     "geocoded": true,
     "geocode_address": "重陽路, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 107,
@@ -1317,7 +1317,7 @@
     "longitude": 121.513821,
     "geocoded": true,
     "geocode_address": "重慶北路3段, 大同區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 111,
@@ -1329,7 +1329,7 @@
     "longitude": 121.513821,
     "geocoded": true,
     "geocode_address": "重慶北路3段, 大同區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 112,
@@ -1341,7 +1341,7 @@
     "longitude": 121.5305186,
     "geocoded": true,
     "geocode_address": "忠誠路2段, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 113,
@@ -1349,11 +1349,11 @@
     "intersection": "中山北路6段與忠誠路1段路口",
     "direction": "東往南",
     "opened_year": "113年",
-    "latitude": 25.1052315,
-    "longitude": 121.5247907,
+    "latitude": 25.1041858,
+    "longitude": 121.526678,
     "geocoded": true,
     "geocode_address": "中山北路6段, 士林區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 114,
@@ -1389,7 +1389,7 @@
     "longitude": 121.5363961,
     "geocoded": true,
     "geocode_address": "建國南路1段, 大安區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 117,
@@ -1401,7 +1401,7 @@
     "longitude": 121.5378878,
     "geocoded": true,
     "geocode_address": "建國南路2段, 大安區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 118,
@@ -1433,11 +1433,11 @@
     "intersection": "市民大道7段與向陽路口",
     "direction": "北往東",
     "opened_year": "113年",
-    "latitude": 25.051892,
-    "longitude": 121.602445,
+    "latitude": 25.0517589,
+    "longitude": 121.5790777,
     "geocoded": true,
     "geocode_address": null,
-    "geocode_source": "manual_fix"
+    "geocode_source": "google_maps_manual"
   },
   {
     "id": 121,
@@ -1445,10 +1445,10 @@
     "intersection": "忠孝東路6段與向陽路口",
     "direction": "東西雙向",
     "opened_year": "114年",
-    "latitude": 25.0467209,
-    "longitude": 121.5838284,
+    "latitude": 25.0517589,
+    "longitude": 121.5790777,
     "geocoded": true,
     "geocode_address": "忠孝東路6段, 南港區, 台北市, 台灣",
-    "geocode_source": "nominatim"
+    "geocode_source": "google_maps_manual"
   }
 ]
